@@ -50,22 +50,22 @@ export default function AIFunPlayground() {
         life: {
             Icon: Lightbulb,
             label: "Life Wisdom",
-            description: "Thoughtful insights about life, growth, and meaning.",
+            description: "Thoughtful insights Question about life, growth, and meaning.",
         },
         love: {
             Icon: Heart,
             label: "Love & Feelings",
-            description: "Deep messages about love, connection, and emotions.",
+            description: "Deep Question about love, connection, and emotions.",
         },
         career: {
             Icon: Briefcase,
             label: "Career Guidance",
-            description: "Motivation for success, ambition, and growth.",
+            description: "Motivation Question for success, ambition, and growth.",
         },
         pain: {
             Icon: HeartCrack,
             label: "Pain & Healing",
-            description: "Comfort for heartbreak, loneliness, and healing.",
+            description: "Question Comfort for heartbreak, loneliness, and healing.",
         },
     };
 
