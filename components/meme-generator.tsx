@@ -3,20 +3,86 @@
 import { useState } from "react"
 
 interface Meme {
-    id: string
-    name: string
-    template: string
-    emoji: string
+    id: string;
+    name: string;
+    template: string;        // placeholders for dynamic text
+    description: string;     // short guide for user
+    emoji: string;
 }
 
 const memeTemplates: Meme[] = [
-    { id: "1", name: "Drake Disapproves", template: "Drake: No ❌ | Drake: Yes ✅", emoji: "🤦" },
-    { id: "2", name: "Distracted Boyfriend", template: "Me looking at: [X] | Actual task: [Y]", emoji: "👀" },
-    { id: "3", name: "Woman Yelling at Cat", template: "[Woman yelling] | [Cat confused]", emoji: "😹" },
-    { id: "4", name: "This is Fine", template: "☕🔥 This is fine", emoji: "🔥" },
-    { id: "5", name: "Shocked Pikachu", template: "Event happens | Me: 😲", emoji: "⚡" },
-    { id: "6", name: "Loss Meme", template: "I | II | II | L", emoji: "📉" },
-]
+    {
+        id: "1",
+        name: "Drake Disapproves",
+        template: "[Dislike option] ❌ | [Like option] ✅",
+        description: "Shows preference between two choices using Drake’s face.",
+        emoji: "🤦",
+    },
+    {
+        id: "2",
+        name: "Distracted Boyfriend",
+        template: "Me: [Current task] | Distracted by: [Distraction] | Girlfriend: [Obligation]",
+        description: "Shows you being tempted by something while ignoring responsibility.",
+        emoji: "👀",
+    },
+    {
+        id: "3",
+        name: "Woman Yelling at Cat",
+        template: "[Woman yelling: Something annoying] | [Cat confused: Reaction]",
+        description: "Classic argument versus confused cat response meme.",
+        emoji: "😹",
+    },
+    {
+        id: "4",
+        name: "This is Fine",
+        template: "[Situation chaotic] | Me: This is fine ☕🔥",
+        description: "Use when things are going wrong but you pretend everything is okay.",
+        emoji: "🔥",
+    },
+    {
+        id: "5",
+        name: "Shocked Pikachu",
+        template: "[Action happens] | Me: 😲",
+        description: "Expresses surprise at predictable consequences.",
+        emoji: "⚡",
+    },
+    {
+        id: "6",
+        name: "Loss Meme",
+        template: "I | II | III | IV",
+        description: "The classic comic layout for awkward or tragic outcomes.",
+        emoji: "📉",
+    },
+    {
+        id: "7",
+        name: "Expanding Brain",
+        template: "[Small idea] → [Bigger idea] → [Galaxy brain idea] → [Ultimate idea]",
+        description: "Shows levels of enlightenment or thinking getting bigger.",
+        emoji: "🧠",
+    },
+    {
+        id: "8",
+        name: "Two Buttons",
+        template: "Button 1: [Option 1] | Button 2: [Option 2] | Person sweating 😓",
+        description: "Shows difficulty in choosing between two options.",
+        emoji: "😅",
+    },
+    {
+        id: "9",
+        name: "Change My Mind",
+        template: "[Statement] | Change my mind 🪑",
+        description: "A meme format to state an opinion and challenge others.",
+        emoji: "🪑",
+    },
+    {
+        id: "10",
+        name: "Is This a Pigeon?",
+        template: "Person: [What it sees] | Caption: Is this [Thing]?",
+        description: "Used when someone mistakes one thing for another.",
+        emoji: "🦋",
+    },
+];
+
 
 export default function MemeGenerator() {
     const [selectedMeme, setSelectedMeme] = useState<Meme>(memeTemplates[0])

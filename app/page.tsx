@@ -1,12 +1,6 @@
-"use client"
-
+import { redirect } from "next/navigation";
 
 export default function Home() {
-
-
-    return (
-      <main>
-          hello
-      </main>
-    )
+    // Automatically redirect to /funny-game
+    redirect("/funny-game");
 }
